@@ -278,6 +278,7 @@ jobs:
       - name: Set KSU and SUSFS for DEFCONFIG
         run: |
           cd $GITHUB_WORKSPACE/device_kernel
+          curl -L https://raw.githubusercontent.com/Subeesh97/NonGKI_Kernel_Build/refs/heads/old-v1/star_defconfig -o arch/arm64/configs/vendor/star_defconfig
           if [[ -d "arch/arm64/configs" ]]; then
             ARCH=arm64
           else
